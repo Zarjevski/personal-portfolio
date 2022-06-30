@@ -9,7 +9,7 @@ const Hero = () => {
       <h1 className="hero-title">Lets begin our journey</h1>
       <div className="dive-button">
         <a href={<AboutMe />}>
-          <span></span>dive
+          <span></span>EXPLORE
         </a>
       </div>
     </section>

@@ -1,5 +1,18 @@
 import React from "react";
 
+const Work = () => {
+  return (
+    <section className="my-work">
+      <div className="buttons-container">
+        <button className="category-button"></button>
+        <button className="category-button"></button>
+        <button className="category-button"></button>
+      </div>
+      <MyWorks />
+    </section>
+  );
+};
+
 const workList = [
   {
     img: "https://getuikit.com/v2/docs/images/placeholder_300x455.svg",
@@ -23,7 +36,7 @@ const workList = [
 
 export const MyWorks = () => {
   return (
-    <section className="works-grid">
+    <div className="cards-grid">
       {workList.map((work) => {
         const { img, title, desc, category } = work;
         return (
@@ -35,8 +48,8 @@ export const MyWorks = () => {
           </div>
         );
       })}
-    </section>
+    </div>
   );
 };
 
-export default MyWorks;
+export default Work;
