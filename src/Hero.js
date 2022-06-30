@@ -8,7 +8,7 @@ const Hero = () => {
       <img src="" alt="" />
       <h1 className="hero-title">Lets begin our journey</h1>
       <div className="dive-button">
-        <a href={<AboutMe />}>
+        <a href=".about-me">
           <span></span>EXPLORE
         </a>
       </div>

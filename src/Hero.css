@@ -15,7 +15,6 @@
     bottom: 0;
     grid-column: 2;
     text-align: center;
-    /* transform: translateY(90%); */
     animation: dive 1500ms alternate infinite;
 
 }
