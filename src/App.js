@@ -1,7 +1,7 @@
 import React from "react";
-import Work from "./Work";
-import Hero from "./Hero";
-import AboutMe from "./AboutMe";
+import Work from "./js/Work";
+import Hero from "./js/Hero";
+import AboutMe from "./js/AboutMe";
 
 const App = () => {
   return (

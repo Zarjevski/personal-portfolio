@@ -21,3 +21,9 @@ main {
   background: rgb(47, 7, 67);
     background: linear-gradient(180deg, rgba(47, 7, 67, 1) 0%, rgba(23, 4, 38, 1) 10%, rgba(11, 2, 17, 1) 30%, rgba(0, 0, 0, 1) 55%);
 }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

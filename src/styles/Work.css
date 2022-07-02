@@ -13,18 +13,36 @@
 
 .buttons-container{
     width: 100%;
+    height: 10%;
     display: flex;
     justify-content: center;
     padding: 0.5rem;
 }
 
+.buttons-container button {
+    background: none;
+    color: aliceblue;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.buttons-container button:hover {
+    color: tomato;
+}
+
+.buttons-container button:active {
+    color: violet;
+}
 
 
 .cards-grid {
     display: grid;
     height: 80%;
     width: 100%;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
     margin-top: 5%;
 }
@@ -38,11 +56,7 @@
     padding: 1rem;
     border: 1px solid white;
     border-radius: 1.2rem;
-
-}
-
-.work-card:first-child {
-    grid-column-start: 2;
+    flex-wrap: wrap;
 }
 
 .work-card img {
