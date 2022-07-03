@@ -1,15 +1,20 @@
 import React from "react";
 import "../styles/Hero.css";
+const spaceShip = document.querySelector(".space-ship");
+
+spaceShip.addEventListener("click", startOrShake);
+const startOrShake = () => {};
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <img src="" alt="" />
-      <h1 className="hero-title">Lets begin our journey</h1>
-      <div className="dive-button">
-        <a href=".about-me">
-          <span></span>EXPLORE
-        </a>
+    <section className="hero center">
+      <div className="tear center">
+        <div className="space-ship">
+          <h6>this is the space ship</h6>
+        </div>
+      </div>
+      <div className="explore-btn">
+        <a href="#about-me">explore</a>
       </div>
     </section>
   );
