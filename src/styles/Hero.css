@@ -35,6 +35,9 @@
         text-transform: uppercase;
         animation: floating-btn 4s alternate infinite;
     }
+    .explore-btn a:hover {
+        color: green;
+    }
 
 }
 

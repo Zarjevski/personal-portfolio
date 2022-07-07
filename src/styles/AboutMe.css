@@ -1,33 +1,34 @@
 .about-me {
     width: 100%;
     height: 100vh;
-    display: flex;
 }
 
-.image-container {
-    height: 100%;
-    width: 50%;
+@media only screen and (max-width: 812px) {
+    
+    .about-title {
+        width: 100%;
+        height: 10%;
+    }
+
+    .light {
+        width: 30%;
+        /* margin: 3rem; */
+        padding: 1rem;
+        border: 1px solid white;
+        text-align: center;
+    }
+
+    .light h1 {
+        font-size: 1rem;
+        text-transform: uppercase;
+
+    }
+
+    .profile-card-area {
+        height: 90%;
+        width: 100%;
+    }
+    
 }
 
-.story-container {
-    width: 50%;
-    height: 100%;
-}
 
-.my-story{
-    width: 50%;
-    background-color: rgba(47, 7, 67, 0.2);
-    backdrop-filter: blur(10px);
-    height: 70%;
-    border-radius: 1.2rem;
-    padding: 2rem;
-}
-
-.image-card {
-    width: 50%;
-    background-color: rgba(47, 7, 67, 0.2);
-    backdrop-filter: blur(10px);
-    height: 70%;
-    border-radius: 1.2rem;
-    padding: 2rem;
-}

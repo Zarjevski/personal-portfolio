@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Hero.css";
-const spaceShip = document.querySelector(".space-ship");
-
-spaceShip.addEventListener("click", startOrShake);
-const startOrShake = () => {};
+const pcScreen = false;
 
 const Hero = () => {
-  return (
-    <section className="hero center">
+  const Tear = () => {
+    return (
       <div className="tear center">
-        <div className="space-ship">
+        <div className="space-ship" onClick={check}>
           <h6>this is the space ship</h6>
         </div>
       </div>
+    );
+  };
+  const [space, SetGame] = useState(<Tear />);
+  const check = () => {
+    if (pcScreen) {
+      SetGame(console.log("you are on a pc"));
+    } else {
+      console.log("you need a pc for this");
+    }
+  };
+  return (
+    <section className="hero center">
+      {space}
       <div className="explore-btn">
         <a href="#about-me">explore</a>
       </div>

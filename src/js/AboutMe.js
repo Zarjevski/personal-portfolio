@@ -1,28 +1,41 @@
 import React from "react";
 import "../styles/AboutMe.css";
 
+const me = {
+  firstName: "Victor",
+  lastName: "Zarjevski",
+  age: "23",
+  country: "israel",
+  phone: "0549193940",
+};
+
+// splited to two parts
+
 const AboutMe = () => {
+  const { firstName, lastName, age, country, phone } = me;
   return (
+    // title start
     <section className="about-me" id="about-me">
-      <h1>about me</h1>
-      <div className="image-container center">
-        <div className="image-card">
-          <img src="" alt="" />
+      <div className="about-title center">
+        <div className="light">
+          <h1>about me</h1>
         </div>
       </div>
-      <div className="story-container center">
-        <div className="my-story">
-          <h1>Victor Zarjevski</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            consequuntur id placeat excepturi aliquid ut et voluptatem in. Rem
-            minus distinctio at necessitatibus dolores consequuntur cum quos
-            rerum porro qui odit sunt unde, culpa repellat facere magni illo
-            impedit, eaque quisquam voluptatum dolor earum veniam? Quo esse
-            dolor sequi! Consequuntur.
-          </p>
+      {/* title end */}
+      {/* my profile and story card start (front of it)*/}
+      <div className="profile-card-area center">
+        <div className="front">
+          <div className="profile-card">
+            <div className="img-container">
+              <img src="" />
+            </div>
+            <div className="details-container"></div>
+          </div>
         </div>
+        {/* back of the card */}
+        <div className="back"></div>
       </div>
+      {/* end of card */}
     </section>
   );
 };
