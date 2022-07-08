@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Hero.css";
-const pcScreen = false;
+const pcScreen = true;
 
 const Hero = () => {
   const Tear = () => {
@@ -12,10 +12,17 @@ const Hero = () => {
       </div>
     );
   };
+  const GameDisplay = () => {
+    return (
+      <div className="game-grid">
+        <h1>this is the game grid</h1>
+      </div>
+    );
+  };
   const [space, SetGame] = useState(<Tear />);
   const check = () => {
     if (pcScreen) {
-      SetGame(console.log("you are on a pc"));
+      SetGame(<GameDisplay />);
     } else {
       console.log("you need a pc for this");
     }
