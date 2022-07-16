@@ -7,7 +7,6 @@ import SideBar, { NavButton } from "./js/SideBar";
 const App = () => {
   return (
     <>
-      <SideBar />
       <main>
         <NavButton />
         <Hero />

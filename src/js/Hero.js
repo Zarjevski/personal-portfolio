@@ -1,37 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import "../styles/Hero.css";
-const pcScreen = true;
+
+const screenWidth = window.innerWidth;
 
 const Hero = () => {
-  const Tear = () => {
+  const check = () => {
+    if (screenWidth > 1000) {
+      setGame(<GameContianer />);
+    } else {
+      shake();
+    }
+  };
+  const shake = () => {
+    console.log("shaking");
+  };
+  const GameContianer = () => {
     return (
-      <div className="tear center">
-        <div className="space-ship" onClick={check}>
-          <h6>this is the space ship</h6>
+      <div className="game-container">
+        <h1>this is the game container</h1>
+      </div>
+    );
+  };
+  const SpaceShip = () => {
+    return (
+      <div className="spaceShip-container center">
+        <div
+          className="space-ship"
+          onClick={() => {
+            check();
+          }}
+        >
+          <h1>this is the spaceship</h1>
         </div>
       </div>
     );
   };
-  const GameDisplay = () => {
-    return (
-      <div className="game-grid">
-        <h1>this is the game grid</h1>
-      </div>
-    );
-  };
-  const [space, SetGame] = useState(<Tear />);
-  const check = () => {
-    if (pcScreen) {
-      SetGame(<GameDisplay />);
-    } else {
-      console.log("you need a pc for this");
-    }
-  };
+  const [game, setGame] = useState(<SpaceShip />);
   return (
     <section className="hero center">
-      {space}
+      {game}
       <div className="explore-btn">
-        <a href="#about-me">explore</a>
+        <a href="#about-me">EXPLORE</a>
       </div>
     </section>
   );
