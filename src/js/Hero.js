@@ -15,10 +15,8 @@ const Hero = () => {
   };
   const check = () => {
     if (screenWidth > 1000) {
-      setGame(() => {
-        <GameContianer />;
-        setIsNoGame(false);
-      });
+      setGame(<GameContianer />);
+      setIsNoGame(false);
     } else {
       shake();
     }
