@@ -5,9 +5,20 @@ import "../styles/Hero.css";
 const screenWidth = window.innerWidth;
 
 const Hero = () => {
+  const [isNoGame, setIsNoGame] = useState(true);
+  const ExploreBtn = () => {
+    return (
+      <div className="explore-btn">
+        <a href="#about-me">EXPLORE</a>
+      </div>
+    );
+  };
   const check = () => {
     if (screenWidth > 1000) {
-      setGame(<GameContianer />);
+      setGame(() => {
+        <GameContianer />;
+        setIsNoGame(false);
+      });
     } else {
       shake();
     }
@@ -40,9 +51,7 @@ const Hero = () => {
   return (
     <section className="hero center">
       {game}
-      <div className="explore-btn">
-        <a href="#about-me">EXPLORE</a>
-      </div>
+      {isNoGame && <ExploreBtn />}
     </section>
   );
 };

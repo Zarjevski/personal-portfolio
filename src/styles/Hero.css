@@ -6,8 +6,8 @@
 
 .spaceShip-container {
     border: 1px solid white;
-    width: 50%;
-    height: 80%;
+    width: 40%;
+    height: 50%;
     margin: 1rem;
     transition: 2s ease-in;
 }
@@ -31,6 +31,10 @@
     padding: 1rem;
     text-transform: uppercase;
     animation: floating-btn 4s alternate infinite;
+}
+
+.explore-btn a:hover {
+    text-shadow: 6px 0px 6px  green;
 }
 
 .game-container {
@@ -60,7 +64,7 @@
         width: 90%;
         height: 50%;
         position: absolute;
-        animation: floating-spaceship 4s alternate infinite;
+        animation: floating-spaceship 2s alternate infinite;
         cursor: pointer;
         box-shadow: 20px green;
     }
@@ -68,7 +72,7 @@
         height: 5%;
         padding: 1rem;
         text-transform: uppercase;
-        animation: floating-btn 4s alternate infinite;
+        animation: floating-btn 2s alternate infinite;
     }
     .explore-btn a:hover {
         color: green;

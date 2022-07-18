@@ -1,17 +1,17 @@
 import React from "react";
-// import Work from "./js/Work";
 import Hero from "./js/Hero";
 import AboutMe from "./js/AboutMe";
-import SideBar, { NavButton } from "./js/SideBar";
+// import SideBar, { NavButton } from "./js/SideBar";
+import Navbar from "./js/Navbar";
 
 const App = () => {
   return (
     <>
+      <Navbar />
       <main>
-        <NavButton />
+        {/* <NavButton /> */}
         <Hero />
         <AboutMe />
-        {/* <Work /> */}
       </main>
     </>
   );

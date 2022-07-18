@@ -3,32 +3,96 @@
     height: 100vh;
 }
 
+.big-card {
+    width: 50%;
+    height: 80%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(1px);
+
+}
+
+.left-side {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.right-side {
+    padding: 1rem;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-side div {
+   margin: 1rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.my-story {
+    width: 80% !important;
+}
+
+.image-container{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-glide{
+    width: 100%;
+    background: linear-gradient(90deg, aqua, transparent);
+    height: 10px;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    animation: top-glide 2s linear infinite;
+    animation-delay: 0.5s;
+}
+.left-glide {
+    width: 10px;
+    background: linear-gradient(180deg, transparent, aqua);
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    animation: left-glide 2s linear infinite;
+    animation-delay: 1.6s;
+}
+
+/* =========== */
+/* animations */
+/* ========== */
+
+@keyframes top-glide {
+    0% {right: -100%;}
+    100%{right: 100%;}
+}
+@keyframes left-glide {
+    0% {top: -100%;}
+    100%{top: 100%;}
+}
+
+/* ============== */
+/* mobile styles */
+/* ============= */
+
 @media only screen and (max-width: 812px) {
     
     .about-title {
         width: 100%;
         height: 10%;
     }
-
-    .light {
-        width: 30%;
-        /* margin: 3rem; */
-        padding: 1rem;
-        border: 1px solid white;
-        text-align: center;
-    }
-
-    .light h1 {
-        font-size: 1rem;
-        text-transform: uppercase;
-
-    }
-
-    .profile-card-area {
-        height: 90%;
-        width: 100%;
-    }
-    
 }
-
-
